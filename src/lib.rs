@@ -95,7 +95,7 @@ pub trait VPath: Debug + std::marker::Send + std::marker::Sync {
     fn extension(&self) -> Option<String>;
 
     /// append a segment to this path
-    fn resolve(&self, path: &String) -> Box<VPath>;
+    fn resolve(&self, path: &str) -> Box<VPath>;
 
     /// Get the parent path
     fn parent(&self) -> Option<Box<VPath>>;

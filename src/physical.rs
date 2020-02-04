@@ -86,7 +86,7 @@ impl VPath for PathBuf {
         }
     }
 
-    fn resolve(&self, path: &String) -> Box<VPath> {
+    fn resolve(&self, path: &str) -> Box<VPath> {
         let mut result = self.clone();
         <PathBuf>::push(&mut result, path);
         return Box::new(result);

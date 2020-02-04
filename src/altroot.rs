@@ -156,7 +156,7 @@ impl VPath for AltPath {
         }
     }
 
-    fn resolve(&self, path: &String) -> Box<VPath> {
+    fn resolve(&self, path: &str) -> Box<VPath> {
         let mut result = self.full_path.clone();
         <PathBuf>::push(&mut result, path);
         return Box::new(result);
